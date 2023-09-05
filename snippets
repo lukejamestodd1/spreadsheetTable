@@ -52,3 +52,66 @@ app.listen(port, () => {
         console.error('Error fetching Excel data:', error);
       });
   </script>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Data Table</title>
+    <style>
+        /* Basic styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 600px) {
+            table {
+                border: 1px solid #ddd;
+            }
+            th, td {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Table Example</h1>
+    
+    <table>
+        <caption>Monthly Expenses</caption>
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Expense</th>
+                <th scope="col">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Food</td>
+                <td>Groceries</td>
+                <td>$250</td>
+            </tr>
+            <tr>
+                <td>Utilities</td>
+                <td>Electricity</td>
+                <td>$100</td>
+            </tr>
+            <!-- Add more table rows as needed -->
+        </tbody>
+    </table>
+
+</body>
